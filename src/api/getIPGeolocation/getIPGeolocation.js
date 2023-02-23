@@ -8,7 +8,6 @@ function validateIP(ip) {
 }
 
 export default async function getIPGeolocation(ip, setData, setCoordinates) {
-    console.log(ip)
     if (!validateIP(ip)) return setData("IP is not valid.");
     try {
         const response = await axios.get(`https://geo.ipify.org/api/v2/country,city?apiKey=${import.meta.env.VITE_GEOIP_KEY}&ipAddress=${ip}`);
