@@ -12,11 +12,11 @@ const informationFields = [
     },
     {
         label: 'Location',
-        value: (data) => `${ data.city }, ${ data.state_prov } ${ data.zipcode }`
+        value: (data) => `${ data.location.city }, ${ data.location.region } ${ data.location.postalCode }`
     },
     {
         label: 'Timezone',
-        value: (data) => `UTC ${formatUTCOffset(data.time_zone.offset)}:00`
+        value: (data) => `UTC ${data.location.timezone}`
     },
     {
         label: 'ISP',
@@ -64,7 +64,10 @@ function Header({ setCoordinates }) {
         getIPGeolocation(ip, setData, setCoordinates);
     }
 
-    useEffect(() => { setFloatingSectionWidth(); }, []);
+    useEffect(() => { 
+        setFloatingSectionWidth();
+        getIPGeolocation(ip, setData, setCoordinates);
+     }, []);
 
     return (
         <header className={ styles["header"] }>
