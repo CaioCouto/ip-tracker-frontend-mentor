@@ -1,0 +1,36 @@
+:root {
+  /* Color */
+  --veryDarkGray: hsl(0, 0%, 17%);
+  --darkGray: hsl(0, 0%, 59%);
+  --white: #fff;
+
+  /* Fonts */
+  --ff: "Rubik", sans-serif;
+  --fsTextInput: 18px;
+
+  /* Misc */
+  --borderRadius: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff);
+}
+
+html {
+  font-size: var(--fs);
+}
+
+.App {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  padding: 1rem;
+  margin-top: auto;
+  text-align: center;
+}

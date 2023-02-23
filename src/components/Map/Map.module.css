@@ -1,0 +1,7 @@
+@import url("/src/App.css");
+
+.map { 
+    display: block;
+    height: 300px;
+    font-family: var(--ff);
+}
