@@ -1,5 +1,3 @@
-@import url("/src/App.css");
-
 .header { 
     position: relative;
     background-size: cover;
@@ -82,7 +80,7 @@
 
 .header-information-dataValue { overflow-wrap: break-word; }
 
-@media (min-width: 1440px) {
+@media (min-width: 900px) {
     .header { 
         position: relative;
         background-size: cover;
@@ -97,25 +95,27 @@
     
     .header-form { width: 50%; }
 
+    .header-section { 
+        width: 85%;
+    }
+
     .header-information {
         height: 40%;
-        width: 75%;
-        padding: .75rem 4rem;
+        padding: .75rem 2rem;
         text-align: center;
         box-sizing: border-box;
         border-radius: var(--borderRadius);
     
-        flex-direction: row;
-        justify-content: space-evenly;
-    
         position: absolute;
         top: 80%;
         z-index: 999;
+
+        display: flex; 
+        flex-direction: row;
+        justify-content: space-evenly;
     
         background: var(--white);
     }
-    
-    .header-information > div { flex-basis: 100%; }
     
     .header-information-dataLabel,
     .header-information-dataValue { text-align: left; }
