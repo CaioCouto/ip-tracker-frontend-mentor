@@ -10,7 +10,7 @@ function setMapDimensions() {
 function initiateMap(position) {
     return new maplibregl.Map({
         container: 'map',
-        style: 'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL', // stylesheet location
+        style: 'https://api.maptiler.com/maps/streets/style.json?key=jwOH9FS8f3MmWVVRkj7V', // stylesheet location
         center: [ position[0], position[1]+5 ], // starting position slightly dislocated to the south
         zoom: 3
     });
